@@ -1,0 +1,127 @@
+.MainBox
+{
+    display: flex;
+    border: 1px solid red;
+    width: 99vw;
+    min-height: 97vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.Options
+{
+    display: flex;
+    gap: 40px;
+}
+
+.Options button
+{
+    background-color: rgb(49, 179, 255);
+    border-radius: 40px;
+    color: white;
+    width: 120px;
+    height: 70px;
+    font-size: 20px;
+    border-width: 0px;
+}
+
+.mode-btn
+{
+    background-color: #1a2a4a;
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.mode-btn:hover
+{
+    background-color: #2c3f63;
+}
+
+.mode-btn.active
+{
+    background-color: #4da6ff;
+    color: black;
+    border-color: #77beff;
+}
+
+.Text
+{
+    color: rgb(49, 179, 255);
+    font-size: large;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Board
+{
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3,120px);
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.Cell
+{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    color: white;
+    cursor: pointer;
+}
+
+.Cell.x,
+.Cell.o 
+{
+    animation: popIn 0.25s ease forwards;
+}
+
+@keyframes popIn {
+    0% {transform: scale(0.3);
+    opacity: 0;
+    }
+
+    100%
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+.Cell.x
+{
+    color: #ff4d4d;
+}
+
+.Cell.o
+{
+    color: #4da6ff;
+}
+
+.game-status
+{
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    min-height: 2.5rem;
+}
+
+.game-status.win
+{
+    color: #4dff88;
+}
+
+.game-status.draw
+{
+    color: #ffd24d;
+}
